@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DAAGLE 개인정보 처리방침</title>
+  <style>
+    :root {
+      --bg-dark: #050814;
+      --bg-card: #0c1020;
+      --accent-blue: #3b82f6;
+      --accent-cyan: #22d3ee;
+      --accent-violet: #a855f7;
+      --accent-yellow: #fbbf24;
+      --accent-red: #fb7185;
+      --text-main: #f9fafb;
+      --text-sub: #9ca3af;
+      --border-soft: #1f2937;
+      --radius-xl: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro KR",
+        "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: radial-gradient(circle at top, #111827 0, var(--bg-dark) 45%, #020617 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 24px;
+    }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto 80px auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    .logo-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 22px;
+      background: radial-gradient(circle at 30% 10%, #fde68a, #fb7185 40%, #3b82f6 80%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 0 0 2px rgba(15, 23, 42, 0.8),
+        0 18px 40px rgba(15, 23, 42, 0.9),
+        0 0 40px rgba(59, 130, 246, 0.65);
+    }
+
+    .logo-ring {
+      width: 80%;
+      height: 80%;
+      border-radius: 999px;
+      border: 2px solid rgba(15, 23, 42, 0.9);
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.1), transparent 55%);
+      position: relative;
+    }
+
+    .logo-node {
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      border-radius: 999px;
+      box-shadow: 0 0 12px rgba(248, 250, 252, 0.7);
+      border: 2px solid rgba(15,23,42,0.9);
+    }
+
+    .logo-node.hex {
+      border-radius: 5px;
+      clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0 50%);
+    }
+
+    .logo-node.n1 { top: -4px; left: 50%; transform: translateX(-50%); background: #fbbf24; }
+    .logo-node.n2 { top: 16%; right: -4px; background: #fb7185; }
+    .logo-node.n3 { bottom: 16%; right: -4px; background: #a855f7; }
+    .logo-node.n4 { bottom: -4px; left: 50%; transform: translateX(-50%); background: #3b82f6; }
+    .logo-node.n5 { bottom: 16%; left: -4px; background: #22d3ee; }
+    .logo-node.n6 { top: 16%; left: -4px; background: #34d399; }
+
+    .title-block h1 {
+      font-size: clamp(26px, 4vw, 32px);
+      letter-spacing: 0.02em;
+      margin-bottom: 4px;
+    }
+
+    .title-block p {
+      font-size: 14px;
+      color: var(--text-sub);
+    }
+
+    .card {
+      background: radial-gradient(circle at top left, rgba(59,130,246,0.18), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(236,72,153,0.16), transparent 55%),
+                  rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 28px 24px 32px;
+      backdrop-filter: blur(24px);
+      box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.9),
+        0 0 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 20px;
+      font-size: 13px;
+      color: var(--text-sub);
+      border-bottom: 1px solid rgba(55,65,81,0.7);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    .meta-row span strong {
+      color: var(--accent-cyan);
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 24px;
+      margin-bottom: 10px;
+      color: #e5e7eb;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin-top: 16px;
+      margin-bottom: 6px;
+      color: #e5e7eb;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    ul {
+      margin: 4px 0 8px 18px;
+      padding-left: 4px;
+    }
+
+    li {
+      font-size: 14px;
+      margin-bottom: 3px;
+      color: var(--text-main);
+    }
+
+    .highlight-box {
+      margin-top: 8px;
+      margin-bottom: 12px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(15,23,42,0.98));
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+      margin-bottom: 12px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      border: 1px solid rgba(75,85,99,0.9);
+      padding: 4px 9px;
+      font-size: 11px;
+      color: var(--text-sub);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .chip span {
+      color: var(--accent-blue);
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 11px;
+      color: #6b7280;
+      text-align: left;
+    }
+
+    a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 16px;
+      }
+      .card {
+        padding: 20px 16px 24px;
+        border-radius: 18px;
+      }
+      .meta-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="logo-circle" aria-hidden="true">
+        <div class="logo-ring">
+          <div class="logo-node hex n1"></div>
+          <div class="logo-node hex n2"></div>
+          <div class="logo-node n3"></div>
+          <div class="logo-node hex n4"></div>
+          <div class="logo-node n5"></div>
+          <div class="logo-node n6"></div>
+        </div>
+      </div>
+      <div class="title-block">
+        <h1>DAAGLE 개인정보 처리방침</h1>
+        <p>나의 인맥 우주, DAAGLE 앱(이하 “앱”)의 개인정보 처리에 관한 안내 문서입니다.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="meta-row">
+        <span><strong>앱명</strong> DAAGLE (다글다글)</span>
+        <span><strong>적용 대상</strong> iOS / Android 앱</span>
+        <span><strong>최초 제정일</strong> 2024-12-01</span>
+        <span><strong>최종 개정일</strong> 2024-12-01</span>
+      </div>
+
+      <h2>1. 총칙</h2>
+      <p>
+        DAAGLE은 사용자의 인맥과 관계를 시각적으로 정리하고 탐색하는 서비스를 제공하면서,
+        이용자의 개인정보를 「개인정보 보호법」 및 관련 법령에 따라 안전하게 보호하기 위해
+        다음과 같이 개인정보 처리방침을 수립·공개합니다.
+      </p>
+
+      <h2>2. 수집하는 개인정보 항목</h2>
+      <h3>1) 자동으로 수집되는 정보</h3>
+      <p>앱 사용 과정에서 다음 정보가 자동으로 수집·전송될 수 있습니다.</p>
+      <ul>
+        <li>광고식별자(ADID, IDFA 등 단말기 광고 ID)</li>
+        <li>앱 사용 로그 및 이용 기록 (화면 열람, 버튼 클릭 등 이벤트 정보)</li>
+        <li>접속 기기 정보 (운영체제 버전, 기기 모델, 언어/국가, 네트워크 유형 등)</li>
+        <li>오류 및 크래시 로그 (앱 안정성 개선 목적)</li>
+        <li>IP 주소(대략적인 위치 기반 통계 분석 목적, 직접 위치 추적 X)</li>
+      </ul>
+
+      <h3>2) 사용자가 직접 입력하는 정보</h3>
+      <p>
+        현재 버전의 DAAGLE 앱에서는 회원가입 기능을 제공하지 않으며,
+        사용자가 이름, 이메일, 전화번호 등 직접적인 식별 정보를
+        필수로 입력하도록 요구하지 않습니다.
+      </p>
+
+      <div class="highlight-box">
+        <strong>※ 중요한 안내</strong><br />
+        DAAGLE은 사용자의 연락처(주소록), 사진, 마이크 등 민감한 권한을
+        사용하지 않으며, 사용자의 동의 없이 제3자에게 판매 또는 임대하지 않습니다.
+      </div>
+
+      <h2>3. 개인정보의 처리 및 이용 목적</h2>
+      <p>수집한 정보는 다음 목적 범위 내에서만 이용됩니다.</p>
+      <ul>
+        <li>앱의 기본 기능 제공 및 서비스 품질 개선</li>
+        <li>서비스 이용 통계, 사용 패턴 분석, UI/UX 개선</li>
+        <li>광고 노출 및 광고 효율 분석 (Google AdMob 등 광고 플랫폼)</li>
+        <li>부정 사용, 해킹·어뷰징 탐지 및 서비스 안정성 확보</li>
+        <li>법령 위반 행위에 대한 조사·대응</li>
+      </ul>
+
+      <h2>4. 광고 식별자 및 광고 SDK 활용</h2>
+      <p>
+        DAAGLE은 무료 서비스를 제공하기 위해 Google AdMob 등 제휴 광고 플랫폼을 사용하며,
+        이 과정에서 광고 식별자(advertising identifier)가 활용될 수 있습니다.
+      </p>
+
+      <h3>1) 사용되는 주요 광고/분석 도구</h3>
+      <ul>
+        <li>Google AdMob (모바일 광고 게재)</li>
+        <li>Google Firebase (선택적으로 통계·분석에 활용 가능)</li>
+      </ul>
+
+      <div class="chip-row">
+        <div class="chip"><span>Google AdMob</span> · 맞춤형 광고 및 광고 수익화</div>
+        <div class="chip"><span>광고 식별자</span> · 광고 빈도 조절 및 성과 측정</div>
+        <div class="chip"><span>로그/이벤트</span> · 앱 사용 패턴 통계</div>
+      </div>
+
+      <h3>2) 제3자 제공 범위</h3>
+      <p>
+        위 광고 및 분석 도구에 한해, 광고식별자와 일부 사용 로그 정보가
+        제3자인 해당 서비스 제공자에게 전송될 수 있습니다.
+        이 정보는 개인을 직접 식별하기 어려운 형태로 사용되며,
+        광고 노출 최적화, 부정 클릭 방지, 서비스 통계 분석 목적에 한정됩니다.
+      </p>
+
+      <h2>5. 개인정보의 보유 및 이용 기간</h2>
+      <ul>
+        <li>광고식별자 및 사용 로그: 수집일로부터 최대 2년</li>
+        <li>관련 법령에서 별도의 보존 기간을 정한 경우 해당 기간 준수</li>
+      </ul>
+      <p>
+        보유 기간 경과 시, 해당 정보는 복구할 수 없는 방법으로 안전하게 파기합니다.
+        일부 정보는 통계·연구 목적의 비식별화 데이터로만 보관될 수 있습니다.
+      </p>
+
+      <h2>6. 이용자의 권리 및 행사 방법</h2>
+      <h3>1) 광고 맞춤 설정 및 추적 제한</h3>
+      <ul>
+        <li>
+          iOS: 설정 &gt; 개인정보 보호 및 보안 &gt; 추적 / 광고 &gt;
+          앱별 추적 허용 여부 조정
+        </li>
+        <li>
+          Android: 설정 &gt; Google &gt; 광고 &gt; 광고 맞춤 설정 해제
+          (버전에 따라 메뉴명은 다를 수 있음)
+        </li>
+      </ul>
+      <p>
+        사용자는 언제든지 디바이스 설정을 통해 맞춤형 광고를 제한하거나,
+        광고 식별자를 초기화할 수 있습니다.
+      </p>
+
+      <h3>2) 문의·삭제 요청</h3>
+      <p>
+        개인정보 열람, 정정, 삭제, 처리 정지 등과 관련된 요청은 아래
+        문의처로 연락해 주시면, 관련 법령이 허용하는 범위 내에서
+        신속하게 검토 및 조치하겠습니다.
+      </p>
+
+      <h2>7. 개인정보 보호를 위한 기술적·관리적 조치</h2>
+      <ul>
+        <li>개인정보 최소 수집 및 목적 제한 원칙 준수</li>
+        <li>네트워크 구간 암호화(HTTPS) 적용</li>
+        <li>개발 및 운영 인원의 접근 권한 최소화</li>
+        <li>외부 라이브러리 및 광고 SDK의 정기 업데이트 및 점검</li>
+      </ul>
+
+      <h2>8. 개인정보 처리방침의 변경</h2>
+      <p>
+        서비스 내용, 관련 법령 또는 보안 기술의 변경에 따라
+        개인정보 처리방침이 수정될 수 있습니다.
+        중요한 변경 사항이 있을 경우, 앱 내 공지 또는 업데이트 안내,
+        또는 별도의 페이지를 통해 사전에 고지하겠습니다.
+      </p>
+      <p>
+        변경된 내용은 별도 명시된 시행일로부터 효력이 발생합니다.
+      </p>
+
+      <h2>9. 문의처</h2>
+      <p>본 개인정보 처리방침 및 개인정보 보호와 관련된 문의는 아래로 연락해 주세요.</p>
+      <ul>
+        <li>앱명: DAAGLE (다글다글)</li>
+        <li>개발자: DK Kwon</li>
+        <li>이메일: <a href="mailto:contact@appsupport.com">contact@appsupport.com</a></li>
+      </ul>
+
+      <footer>
+        본 문서는 DAAGLE 앱을 위해 작성된 전용 개인정보 처리방침으로,<br />
+        GitHub Pages, 개인 웹사이트, 앱 스토어 심사용 URL 등에 자유롭게 사용·호스팅할 수 있습니다.
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
