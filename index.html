@@ -6,7 +6,7 @@
   <title>Hello DUCK | Crafting Everyday Joy</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Pretendard:wght@300;400;500;600;700;800&family=Black+Han+Sans&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-base: #0B0F14;
@@ -23,6 +23,8 @@
       --bondtu-light: #F4EFE6;
       --sayday-bg: #FAF8F5;
       --sayday-text: #1E232A;
+      --plan2000-bg: #F2F4F3;
+      --plan2000-ink: #14202B;
     }
 
     * {
@@ -267,6 +269,11 @@
       border: 1px solid rgba(0,0,0,0.06);
     }
 
+    .app-icon.plan2000 {
+      background: var(--plan2000-bg);
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
     .app-meta {
       flex: 1;
     }
@@ -407,6 +414,17 @@
     }
 
     .store-btn.google:hover {
+      background: #F3F4F6;
+      transform: translateY(-2px);
+    }
+
+    .store-btn.visit {
+      background: #FFFFFF;
+      color: #111827;
+      border: 1px solid #FFFFFF;
+    }
+
+    .store-btn.visit:hover {
       background: #F3F4F6;
       transform: translateY(-2px);
     }
@@ -682,6 +700,57 @@
                 <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.9.04-2 .6-2.63 1.34-.56.64-.97 1.7-.84 2.73.99.08 1.98-.49 2.55-1.2"/>
               </svg>
               App Store에서 다운로드
+            </a>
+          </div>
+        </article>
+
+        <!-- 2000만 전역 설계 Card -->
+        <article class="product-card">
+          <div>
+            <div class="card-top">
+              <div class="app-icon plan2000">
+                <svg viewBox="0 0 100 100" width="60" height="60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <text x="50" y="60" text-anchor="middle" font-family="'Black Han Sans', sans-serif" font-size="28" fill="#14202B">2000</text>
+                </svg>
+              </div>
+              <div class="app-meta">
+                <div class="status-badge-group">
+                  <span class="status-badge live">
+                    <span class="pulse-dot"></span>
+                    서비스 중
+                  </span>
+                </div>
+                <div class="app-title-wrap">
+                  <span class="app-name">2000만 전역 설계</span>
+                </div>
+                <div class="app-headline">전역금 2000만원, 65세까지 굴리면 얼마가 될까</div>
+              </div>
+            </div>
+
+            <p class="app-description">
+              군 전역 후 받는 이별금 2000만원을 그냥 두지 말고, 정기예금·코스피·S&P500으로 굴렸을 때 65세에 얼마가 되는지 직접 시뮬레이션해보는 웹 계산기입니다.
+            </p>
+
+            <ul class="app-features">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                입대일만 입력하면 전역일·군적금 자동 계산
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                정기예금·코스피·S&P500 수익률 비교 및 40년 복리 시뮬레이션
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-group">
+            <a href="https://2000.helloduck.co.kr/" target="_blank" rel="noopener noreferrer" class="store-btn visit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              바로가기
             </a>
           </div>
         </article>
